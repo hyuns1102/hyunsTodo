@@ -30,7 +30,7 @@ function askForName() {
     form.addEventListener("submit", handleSubmitGreet);
     input.value = "";
 }
-///aaa
+///aaa branch 추가 후 서버 테스트
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
