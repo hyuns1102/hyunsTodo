@@ -1,8 +1,4 @@
-const toDoForm = document.querySelector(".js-toDoForm"),
-  toDoInput = toDoForm.querySelector("input"),
-  toDoList = document.querySelector(".js-toDoList");
-
-const TODOS_LS = "toDos";
+let USERTODOS_LS = "";
 let toDos = [];
 
 function deleteToDo(event) {
@@ -17,7 +13,7 @@ function deleteToDo(event) {
 }
 
 function saveToDos() {
-  localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); //객체를 string형으로 바꿔준다.
+  localStorage.setItem(USERTODOS_LS, JSON.stringify(toDos)); //객체를 string형으로 바꿔준다.
 }
 
 function paintToDo(text) {
@@ -25,9 +21,6 @@ function paintToDo(text) {
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  // const buttonStyle = {
-  //     backgroundcolor:
-  // }
 
   delBtn.innerText = "❌";
   delBtn.style.backgroundColor = "transparent";
@@ -57,7 +50,9 @@ function handleSubmit(event) {
 }
 
 function loadToDos() {
-  const loadedToDos = localStorage.getItem(TODOS_LS);
+  const currentUser = localStorage.getItem(USER_LS);
+  USERTODOS_LS = TODOS_LS + "-" + currentUser;
+  const loadedToDos = localStorage.getItem(USERTODOS_LS);
   if (loadedToDos !== null) {
     const parsedToDos = JSON.parse(loadedToDos); // string을 객체형으로 바꾼다.
     parsedToDos.forEach(function (toDo) {

@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Something</title>
     <link rel="stylesheet" href="index.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <h1 id="title" class="btn">This works!</h1> -->
-    <div class="js-clock">
-        <h1>00:00</h1>
+    <div id="upper">
+      <div>
+        <div class="js-clock">
+          <h1>00:00</h1>
+        </div>
+        <form class="js-form form">
+          <input type="text" placeholder="what is your name?" />
+        </form>
+        <h4 class="js-greetings greeting"></h4>
+        <form class="js-toDoForm form">
+          <input type="text" placeholder="Write a to do" />
+          <!--make to do list-->
+        </form>
+        <ul class="js-toDoList form"></ul>
+      </div>
+
+      <div class="category">
+        <span class="js-weather"></span>
+        <h1>User Category</h1>
+        <ul class="js-category"></ul>
+      </div>
+      <!--make to do list-->
+
+      <!-- <script src="todo.js"></script> -->
     </div>
-    <form class="js-form form">
-        <input type="text" placeholder="what is your name?" />
-    </form>
-    <h4 class="js-greetings greeting"></h4>
-    <form class = "js-toDoForm">
-        <input type="text" placeholder="Write a to do" />       <!--make to do list-->
-    </form>
-    <ul class = "js-toDoList">
-    </ul>                                                       <!--make to do list-->
-    <span class="js-weather"></span>
+    <!-- 
+     -->
+
+    <script src="variable.js"></script>
     <script src="greeting.js"></script>
     <script src="clock.js"></script>
-    <script src="todo.js"></script>                             <!--make to do list-->
-    <script src="bg.js"></script>                               <!--make Image background-->
-    <script src="weather.js"></script>
-</body>
+    <!-- <script src="test.js"></script> -->
+    <script src="todo-user.js"></script>
 
+    <!--make to do list-->
+    <script src="bg.js"></script>
+    <!--make Image background-->
+    <script src="weather.js"></script>
+    <script src="user-category.js"></script>
+  </body>
 </html>
