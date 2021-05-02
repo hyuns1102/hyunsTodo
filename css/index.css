@@ -1,0 +1,108 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  text-align: end;
+}
+
+main {
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  top: 10vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+}
+h1 {
+  margin: 10px 0px;
+}
+h4 {
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.click {
+  color: hsl(215, 18%, 57%);
+}
+
+.form,
+.greeting {
+  margin: 20px 0px;
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bgImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+.js-toDoList {
+  margin: 0px 0px;
+  width: 200px;
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+}
+.js-toDoList span {
+  margin: 0px 30px;
+}
+
+.js-toDoList button-fin {
+  cursor: pointer;
+}
+
+.js-toDoList button-fin:focus {
+  animation: blinker 2s linear;
+}
+
+.js-toDoList button-re {
+  cursor: pointer;
+}
+
+.js-toDoList button-re:focus {
+  animation: blinker 2s linear;
+}
+
+.js-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+
+.js-colon {
+  /* margin-top: 50px; */
+  animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
