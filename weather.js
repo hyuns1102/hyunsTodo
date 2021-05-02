@@ -1,6 +1,6 @@
 function getWeather(lat, lon) {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEYS}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEYS}&units=metric`
   )
     .then(function (response) {
       // 'then'은 networking을 할 때, 위의 API에서 DATA를 받아오는데 걸리는 시간이 있다. 그 시간을 기다려주는 역할
